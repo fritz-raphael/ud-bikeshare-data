@@ -1,5 +1,5 @@
-# Project for Udacity's 'Python for Data Science'-Course
+## Project for Udacity's 'Python for Data Science'-Course
 
-The goal was to write a terminal program
+The goal of this project was to write a terminal program
 that enables the user to get **statistical data on bikesharing**
 in three US-cities (Chicago, New York City, and Washington).
