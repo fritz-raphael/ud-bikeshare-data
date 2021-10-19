@@ -3,3 +3,8 @@ bikeshare.zip
 Calculate_most_popular_hour.py
 Detect_user_types.py
 Filter_and_load.py
+chicago.csv
+new_york_city.csv
+washington.csv
+
+.github/**
