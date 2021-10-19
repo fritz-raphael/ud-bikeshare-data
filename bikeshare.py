@@ -129,7 +129,7 @@ def show_raw_data(df):
     """Prompts the user if they want to see five lines of raw data at a time."""
 
     raw_data = input("Do you want to see five rows of the original data?\n"\
-    "Type 'Yes' or anything else.\n").lower()
+    "Type 'Yes' or anything else.\n").lower().strip()
     while raw_data == 'yes':
         for five_rows in range(0, df.shape[0], 5):
             if 'Gender' in df.columns:
@@ -137,7 +137,8 @@ def show_raw_data(df):
             else:
                 print(df.iloc[:, 1:6].iloc[five_rows:(five_rows+5)])
             try:
-                raw_data = input("\nDo you want to see five more rows?\n")
+                raw_data = input("\nDo you want to see five more rows?\n")\
+                .lower().strip()
                 if raw_data != 'yes':
                     break
                 else:
@@ -318,8 +319,9 @@ def main():
         user_stats(df)
         show_raw_data(df)
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter yes or no.\n')\
+                  .lower().strip()
+        if restart != 'yes':
             print("Exiting program.")
             break
 
