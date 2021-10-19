@@ -21,7 +21,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print("Hello! Let's explore some US bikeshare data!")
     print("Pandas-version: {}".format(pd.__version__))
     # get user input for city (chicago, new york city, washington).
     # HINT: Use a while loop to handle invalid inputs
@@ -30,14 +30,14 @@ def get_filters():
             city = input("Please enter a city (Chicago, New York City, or Washington).\n")\
                     .lower().strip()
             if city not in CITY_DATA:
-                print('I can\'t recognize this city. \nPlease try again.\n')
+                print("I can't recognize this city. \nPlease try again.\n")
                 continue
             else:
                 print('You have seleted {}.\n'.format(city.title()))
             break
         except Exception as e:
             print('There was an exception: ', e, '\n')
-            print('Let\'s try again. \n')
+            print("Let's try again. \n")
             continue
 
     # get user input for month (all, january, february, ... , june)
@@ -66,7 +66,7 @@ def get_filters():
                         "or enter 'all'.\n").lower().strip()
             if day != 'all':
                 if day not in days_of_week:
-                    print('I can\'t recognize this day.\n Please try again.')
+                    print("I can't recognize this day.\n Please try again.")
                     continue
                 else:
                     print('You have selected {}.'.format(day.title()))
